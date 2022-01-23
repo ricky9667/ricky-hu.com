@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, onMounted} from "vue";
 import Home from "./components/Home.vue";
 import LinkIcons from "./components/LinkIcons.vue";
 
@@ -20,6 +20,9 @@ export default defineComponent({
     Home,
     LinkIcons,
   },
+  setup() {
+    onMounted(() => document.title = "Ricky Hu")
+  }
 });
 </script>
 
