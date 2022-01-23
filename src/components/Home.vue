@@ -7,6 +7,7 @@
     >
 
     <h1 class="text-white">Ricky Hu</h1>
+    <h4 class="text-white">Learn more to contribute more.</h4>
     <h4 class="text-white">Programming / Speedcubing / Table Tennis / Cats</h4>
   </div>
 </template>

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="navbar" class="h-16 px-8 py-0">
-      <h3 class="text-white float-left">🇹🇼 Ricky Hu</h3>
-      <h3 class="text-white float-right">About</h3>
+      <h2 class="text-white float-left">🇹🇼 Ricky Hu</h2>
+      <h2 class="text-white float-right">About</h2>
     </div>
     <Home class="my-8"/>
     <LinkIcons />
@@ -40,6 +40,5 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>

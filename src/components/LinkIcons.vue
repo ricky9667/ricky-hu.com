@@ -1,5 +1,5 @@
 <template>
-  <div id="link-icons" class="flex flex-row justify-center gap-1 md:gap-3">
+  <div id="link-icons" class="flex flex-row flex-wrap justify-center gap-1 md:gap-3">
     <a v-for="(link, index) in links" :key="index" :href="link.url" target="_blank" class="link-icon-animation">
       <img
         :src="link.image"
@@ -41,6 +41,11 @@ export default defineComponent({
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/ricky9667/",
         image: "https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw=s360"
+      },
+      {
+        name: "Youtube",
+        url: "https://www.youtube.com/channel/UCYq5TILummVA0cGksIDdNag",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/2048px-YouTube_social_white_square_%282017%29.svg.png"
       },
       {
         name: "Twitter",
