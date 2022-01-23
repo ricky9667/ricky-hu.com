@@ -1,19 +1,24 @@
 <template>
-  <div id="navbar" class="h-16 px-8 py-0">
-    <h3 class="text-white float-left">🇹🇼 Ricky Hu</h3>
-    <h3 class="text-white float-right">About</h3>
+  <div>
+    <div id="navbar" class="h-16 px-8 py-0">
+      <h3 class="text-white float-left">🇹🇼 Ricky Hu</h3>
+      <h3 class="text-white float-right">About</h3>
+    </div>
+    <Home class="my-8"/>
+    <LinkIcons />
   </div>
-  <Home class="my-8"/>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
 import Home from "./components/Home.vue";
+import LinkIcons from "./components/LinkIcons.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     Home,
+    LinkIcons,
   },
 });
 </script>

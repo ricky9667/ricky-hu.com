@@ -1,13 +1,12 @@
 <template>
-  <div id="home">
-    <img
-      src="https://www.gravatar.com/avatar/ac9998c597a87af978beb083443f8eb7?s=800"
-      alt="Me"
-      class="profile-image"
-    >
-
-    <h1 class="text-white">Ricky Hu</h1>
-    <h4 class="text-white">Programming / Speedcubing / Table Tennis / Cats</h4>
+  <div id="link-icons" class="flex flex-row justify-center gap-1 md:gap-3">
+    <a v-for="(link, index) in links" :key="index" :href="link.url" target="_blank" class="link-icon-animation">
+      <img
+        :src="link.image"
+        :alt="link.name"
+        class="link-icon-image"
+      >
+    </a>
   </div>
 </template>
 
@@ -15,9 +14,9 @@
 import {defineComponent} from "vue";
 
 export default defineComponent({
-  name: "Home",
+  name: "LinkIcons",
   setup() {
-    const socialLinks = [
+    const links = [
       {
         name: "Facebook",
         url: "https://www.facebook.com/ricky.hu.0110/",
@@ -55,13 +54,17 @@ export default defineComponent({
       }
     ];
 
-    return {socialLinks}
+    return { links };
   }
 });
 </script>
 
 <style scoped>
-.profile-image {
-  @apply rounded-full w-32 md:w-48 lg:w-60;
+.link-icon-animation {
+  @apply transform hover:-translate-y-1 transition duration-150;
+}
+
+.link-icon-image {
+  @apply w-8 sm:w-10 rounded-full;
 }
 </style>
