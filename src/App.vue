@@ -1,11 +1,13 @@
 <template>
   <div>
-    <div id="navbar" class="h-16 px-8 py-0">
-      <h2 class="text-white float-left">🇹🇼 Ricky Hu</h2>
-      <h2 class="text-white float-right">About</h2>
-    </div>
+    <nav id="navbar" class="h-16 px-8 py-0">
+      <a href="/">
+        <h2 class="text-white float-left navbar-text">🇹🇼 Ricky Hu</h2>
+      </a>
+      <h2 class="text-white float-right navbar-text">About</h2>
+    </nav>
     <Home class="my-8"/>
-    <LinkIcons />
+    <LinkIcons/>
   </div>
 </template>
 
@@ -40,5 +42,17 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+.navbar-text {
+  background-image: linear-gradient(white, white);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size .25s ease;
+}
+
+.navbar-text:hover {
+  background-size: 100% 2px;
 }
 </style>
