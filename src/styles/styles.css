@@ -5,18 +5,34 @@
 
 @layer base {
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl font-sans text-gray-700;
   }
 
   h2 {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-xl sm:text-2xl md:text-3xl font-sans text-gray-700;
   }
 
   h3 {
-    @apply text-lg md:text-xl lg:text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl font-sans text-gray-700;
   }
 
   h4 {
-    @apply text-base md:text-lg;
+    @apply text-base md:text-lg lg:text-xl font-sans text-gray-700;
   }
+
+  p, li {
+    @apply text-sm md:text-base font-sans text-gray-500;
+  }
+}
+
+.underline-animation {
+  background-image: linear-gradient(white, white);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size .25s ease;
+}
+
+.underline-animation:hover {
+  background-size: 100% 2px;
 }

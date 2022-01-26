@@ -2,9 +2,11 @@
   <div>
     <nav id="navbar" class="h-16 px-8 py-0">
       <a href="/">
-        <h2 class="text-white float-left navbar-text">🇹🇼 Ricky Hu</h2>
+        <h3 class="text-white float-left underline-animation">🇹🇼 Ricky Hu</h3>
       </a>
-      <h2 class="text-white float-right navbar-text">About</h2>
+      <div>
+        <AboutButton />
+      </div>
     </nav>
     <Home class="my-8"/>
     <LinkIcons/>
@@ -15,10 +17,12 @@
 import {defineComponent, onMounted} from "vue";
 import Home from "./components/Home.vue";
 import LinkIcons from "./components/LinkIcons.vue";
+import AboutButton from "./components/AboutButton.vue";
 
 export default defineComponent({
   name: "App",
   components: {
+    AboutButton,
     Home,
     LinkIcons,
   },
@@ -42,17 +46,5 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-
-.navbar-text {
-  background-image: linear-gradient(white, white);
-  background-size: 0 2px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size .25s ease;
-}
-
-.navbar-text:hover {
-  background-size: 100% 2px;
 }
 </style>
